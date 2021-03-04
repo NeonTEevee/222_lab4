@@ -18,8 +18,8 @@ int main ()
 			{
 				switch(ball[j])
 				{
-					case '2': ball[j] = 3; break;
-					case '3': ball[j] = 2; break;
+					case 2: ball[j] = 3; break;
+					case 3: ball[j] = 2; break;
 					default: ball[j] = ball[j]; break;
 				}
 				printf("Ball's current position is %d\n", ball[j]);
@@ -28,8 +28,8 @@ int main ()
 			{
 				switch(ball[j])
 				{
-					case '1': ball[j] = 4; break;
-					case '4': ball[j] = 1; break;
+					case 1: ball[j] = 4; break;
+					case 4: ball[j] = 1; break;
 					default: ball[j] = ball[j]; break;
 				}
 				printf("Ball's current position is %d\n", ball[j]);
@@ -38,10 +38,10 @@ int main ()
 			{
 				switch(ball[j])
 				{
-					case '1': ball[j] = 3; break;
-					case '2': ball[j] = 4; break;
-					case '3': ball[j] = 1; break;
-					case '4': ball[j] = 2; break;
+					case 1: ball[j] = 3; break;
+					case 2: ball[j] = 4; break;
+					case 3: ball[j] = 1; break;
+					case 4: ball[j] = 2; break;
 					default: ball[j] = ball[j]; break;
 				}
 				printf("Ball's current position is %d\n", ball[j]);
@@ -50,10 +50,10 @@ int main ()
 			{
 				switch(ball[j])
 				{
-					case '1': ball[j] = 2; break;
-					case '2': ball[j] = 1; break;
-					case '3': ball[j] = 4; break;
-					case '4': ball[j] = 3; break;
+					case 1: ball[j] = 2; break;
+					case 2: ball[j] = 1; break;
+					case 3: ball[j] = 4; break;
+					case 4: ball[j] = 3; break;
 					default: ball[j] = ball[j]; break;
 				}
 				printf("Ball's current position is %d\n", ball[j]);
@@ -62,10 +62,10 @@ int main ()
 			{
 				switch(ball[j])
 				{
-					case '1': ball[j] = 4; break;
-					case '2': ball[j] = 3; break;
-					case '3': ball[j] = 2; break;
-					case '4': ball[j] = 1; break;
+					case 1: ball[j] = 4; break;
+					case 2: ball[j] = 3; break;
+					case 3: ball[j] = 2; break;
+					case 4: ball[j] = 1; break;
 					default: ball[j] = ball[j]; break;
 				}
 				printf("Ball's current position is %d\n", ball[j]);
