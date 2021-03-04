@@ -10,7 +10,11 @@ int main ()
 	for(i=1; i<strlen(sentence); i++)
 	{
 		if(sentence[i] == ' ')
-			acronym[j] = sentence[i+1] - 32;
+		{
+			i++;
+			acronym[j] = sentence[i] - 32;
+			j++;
+		}
 	}
 	
 	printf("%s", acronym);
