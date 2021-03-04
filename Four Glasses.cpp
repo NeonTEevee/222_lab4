@@ -2,7 +2,7 @@
 #include <string.h>
 int main ()
 {
-	int round, i;
+	int round, i, j;
 	char order[50];
 	scanf("%d", &round);
 	scanf(" %s", order);
@@ -10,38 +10,65 @@ int main ()
 	int ball[round];
 	for(i=0; i<=round; i++)
 		ball[i] = 1;
-	
-	for(i=0; i<strlen(order); i++)
+	for(j=0; j<round; j++)
 	{
-		if(order[i] == 'A')
+		for(i=0; i<strlen(order); i++)
 		{
-			switch(ball[i])
+			if(order[i] == 'A')
 			{
-				case '2': ball[i] = 3; break;
-				case '3': ball[i] = 2; break;
-				default: ball[i] = ball[i]; break;
+				switch(ball[j])
+				{
+					case '2': ball[j] = 3; break;
+					case '3': ball[j] = 2; break;
+					default: ball[j] = ball[j]; break;
+				}
+			}
+			if(order[i] == 'B')
+			{
+				switch(ball[j])
+				{
+					case '1': ball[j] = 4; break;
+					case '4': ball[j] = 1; break;
+					default: ball[j] = ball[j]; break;
+				}
+			}
+			if(order[i] == 'C')
+			{
+				switch(ball[j])
+				{
+					case '1': ball[j] = 3; break;
+					case '2': ball[j] = 4; break;
+					case '3': ball[j] = 1; break;
+					case '4': ball[j] = 2; break;
+					default: ball[j] = ball[j]; break;
+				}
+			}
+			if(order[i] == 'D')
+			{
+				switch(ball[j])
+				{
+					case '1': ball[j] = 2; break;
+					case '2': ball[j] = 1; break;
+					case '3': ball[j] = 4; break;
+					case '4': ball[j] = 3; break;
+					default: ball[j] = ball[j]; break;
+				}
+			}
+			if(order[i] == 'E')
+			{
+				switch(ball[j])
+				{
+					case '1': ball[j] = 4; break;
+					case '2': ball[j] = 3; break;
+					case '3': ball[j] = 2; break;
+					case '4': ball[j] = 1; break;
+					default: ball[j] = ball[j]; break;
+				}
 			}
 		}
-		if(order[i] == 'B')
-		{
-			switch(ball[i])
-			{
-				case '1': ball[i] = 4; break;
-				case '4': ball[i] = 1; break;
-				default: ball[i] = ball[i]; break;
-			}
-		}
-		if(order[i] == 'C')
-		{
-			switch(ball[i])
-			{
-				case '1': ball[i] = 3; break;
-				case '2': ball[i] = 4; break;
-				case '3': ball[i] = 1; break;
-				case '4': ball[i] = 2; break;
-				default: ball[i] = ball[i]; break;
-			}
-		}
-
 	}
+	
+	for(i=0; i<round; i++)
+		printf("%d\n", ball[i]);
+	return 0;
 }
