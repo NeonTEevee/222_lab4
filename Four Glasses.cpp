@@ -22,7 +22,6 @@ int main ()
 					case 3: ball[j] = 2; break;
 					default: ball[j] = ball[j]; break;
 				}
-				printf("Ball's current position is %d\n", ball[j]);
 			}
 			if(order[i] == 'B')
 			{
@@ -32,7 +31,6 @@ int main ()
 					case 4: ball[j] = 1; break;
 					default: ball[j] = ball[j]; break;
 				}
-				printf("Ball's current position is %d\n", ball[j]);
 			}
 			if(order[i] == 'C')
 			{
@@ -44,7 +42,6 @@ int main ()
 					case 4: ball[j] = 2; break;
 					default: ball[j] = ball[j]; break;
 				}
-				printf("Ball's current position is %d\n", ball[j]);
 			}
 			if(order[i] == 'D')
 			{
@@ -56,7 +53,6 @@ int main ()
 					case 4: ball[j] = 3; break;
 					default: ball[j] = ball[j]; break;
 				}
-				printf("Ball's current position is %d\n", ball[j]);
 			}
 			if(order[i] == 'E')
 			{
@@ -68,7 +64,6 @@ int main ()
 					case 4: ball[j] = 1; break;
 					default: ball[j] = ball[j]; break;
 				}
-				printf("Ball's current position is %d\n", ball[j]);
 			}
 		}
 	}
