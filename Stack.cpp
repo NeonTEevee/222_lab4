@@ -10,18 +10,21 @@ int main ()
 	
 	char *token = strtok(input, " ");
 	while(token != NULL) {
-		if(token == "+")
+		if(strcmp(token, "+") == 1)
 		{
 			i--;
 			num = stack[i-1] + stack[i];
+			printf("Operation Plus Num = %d\n", num);
 			stack[i] = 0;
-		} else if (token == "-") {
+		} else if (strcmp(token, "-") == 1) {
 			i--;
 			num = stack[i-1] - stack[i];
+			printf("Operation Minus Num = %d\n", num);
 			stack[i] = 0;
-		} else if (token == "*") {
+		} else if (strcmp(token, "*") == 1) {
 			i--;
 			num = stack[i-1] * stack[i];
+			printf("Operation Times Num = %d\n", num);
 			stack[i] = 0;
 		} else {
 			stack[i] = atoi(token);
@@ -30,4 +33,6 @@ int main ()
 		}
 		token = strtok(NULL, " ");
 	}
+	printf("%d", num);
+	return 0;
 }
