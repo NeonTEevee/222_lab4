@@ -3,28 +3,28 @@
 #include <string.h>
 int main ()
 {
-	int i = 0, terms, stack[100], num;
+	int i = 0, j, terms, stack[100], num;
 	char input[100];
 	scanf("%d", &terms);
 	scanf(" %[^\n]", input);
 	
 	char *token = strtok(input, " ");
-	while(token != NULL) {
+	for(j=0; j<terms; j++) {
 		if(strcmp(token, "+") == 0)
 		{
 			i--;
 			num = stack[i-1] + stack[i];
-			printf("Operation Plus Num = %d\n", num);
+			printf("Operation Plus = %d + %d = %d\n", stack[i-1], stack[i], num);
 			stack[i] = 0;
 		} else if (strcmp(token, "-") == 0) {
 			i--;
 			num = stack[i-1] - stack[i];
-			printf("Operation Minus Num = %d\n", num);
+			printf("Operation Minus = %d - %d = %d\n", stack[i-1], stack[i], num);;
 			stack[i] = 0;
 		} else if (strcmp(token, "*") == 0) {
 			i--;
 			num = stack[i-1] * stack[i];
-			printf("Operation Times Num = %d\n", num);
+			printf("Operation Multiplication = %d * %d = %d\n", stack[i-1], stack[i], num);
 			stack[i] = 0;
 		} else {
 			stack[i] = atoi(token);
