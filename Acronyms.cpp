@@ -11,9 +11,41 @@ int main ()
 	{
 		if(sentence[i] == ' ')
 		{
-			i++;
-			acronym[j] = sentence[i] - 32;
-			j++;
+			if(sentence[i+1] == 'i' && sentence[i+2] == ' ')
+			{
+				i++;
+			} else if (sentence[i+1] == 'o' && sentence[i+2] == 'f' && sentence[i+3] == ' ')
+			{
+				i++;
+			} else if (sentence[i+1] == 't' && sentence[i+2] == 'h' && sentence[i+3] == 'e' && sentence[i+4] == ' ')
+			{
+				i++;
+			} else if (sentence[i+1] == 'o' && sentence[i+2] == 'n' && sentence[i+3] == ' ')
+			{
+				i++;
+			} else if (sentence[i+1] == 'a' && sentence[i+2] == 't' && sentence[i+3] == ' ')
+			{
+				i++;
+			} else if (sentence[i+1] == 'f' && sentence[i+2] == 'o' && sentence[i+3] == 'r' && sentence[i+4] == ' ')
+			{
+				i++;
+			} else if (sentence[i+1] == 'w' && sentence[i+2] == 'i' && sentence[i+3] == 't' && sentence[i+4] == 'h' && sentence[i+5] == ' ')
+			{
+				i++;
+			} else if (sentence[i+1] == 'a' && sentence[i+2] == ' ')
+			{
+				i++;
+			} else if (sentence[i+1] == 'i' && sentence[i+2] == 'n' && sentence[i+3] == ' ')
+			{
+				i++;
+			} else if (sentence[i+1] == 'a' && sentence[i+2] == 'n' && sentence[i+3] == 'd' && sentence[i+4] == ' ')
+			{
+				i++;
+			}  else {
+				i++;
+				acronym[j] = sentence[i] - 32;
+				j++;
+			}
 		}
 	}
 	
