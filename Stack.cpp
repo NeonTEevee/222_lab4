@@ -14,21 +14,20 @@ int main ()
 		{
 			i--;
 			num = stack[i-1] + stack[i];
-			printf("Operation Plus = %d + %d = %d\n", stack[i-1], stack[i], num);
 			stack[i] = 0;
+			stack[i-1] = num;
 		} else if (strcmp(token, "-") == 0) {
 			i--;
 			num = stack[i-1] - stack[i];
-			printf("Operation Minus = %d - %d = %d\n", stack[i-1], stack[i], num);;
 			stack[i] = 0;
+			stack[i-1] = num;
 		} else if (strcmp(token, "*") == 0) {
 			i--;
 			num = stack[i-1] * stack[i];
-			printf("Operation Multiplication = %d * %d = %d\n", stack[i-1], stack[i], num);
 			stack[i] = 0;
+			stack[i-1] = num;
 		} else {
 			stack[i] = atoi(token);
-			printf("%d\n", stack[i]);
 			i++;
 		}
 		token = strtok(NULL, " ");
