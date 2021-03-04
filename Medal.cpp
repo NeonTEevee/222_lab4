@@ -9,7 +9,6 @@ int main ()
 	{
 		scanf("%d %d %d", &gold[i], &silver[i], &bronze[i]);
 		value[i] = (4*gold[i])+(2*silver[i])+bronze[i];
-		printf("Year %d = %d gold %d silver %d bronze = %d\n", i+1, gold[i], silver[i], bronze[i], value[i]);
 	}
 	
 	for(i=0; i<year-2; i++)
