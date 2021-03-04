@@ -26,6 +26,6 @@ int main ()
 		}
 	}
 	
-	printf("%d %d", best, worst);
+	printf("%d %d", Byear, Wyear);
 	return 0;
 }
