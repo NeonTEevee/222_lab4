@@ -10,18 +10,18 @@ int main ()
 	
 	char *token = strtok(input, " ");
 	while(token != NULL) {
-		if(strcmp(token, "+") == 1)
+		if(strcmp(token, "+") == 0)
 		{
 			i--;
 			num = stack[i-1] + stack[i];
 			printf("Operation Plus Num = %d\n", num);
 			stack[i] = 0;
-		} else if (strcmp(token, "-") == 1) {
+		} else if (strcmp(token, "-") == 0) {
 			i--;
 			num = stack[i-1] - stack[i];
 			printf("Operation Minus Num = %d\n", num);
 			stack[i] = 0;
-		} else if (strcmp(token, "*") == 1) {
+		} else if (strcmp(token, "*") == 0) {
 			i--;
 			num = stack[i-1] * stack[i];
 			printf("Operation Times Num = %d\n", num);
