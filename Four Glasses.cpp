@@ -5,13 +5,13 @@ int main ()
 	int round, i, j;
 	char order[50];
 	scanf("%d", &round);
-	scanf(" %s", order);
 	
 	int ball[round];
 	for(i=0; i<=round; i++)
 		ball[i] = 1;
 	for(j=0; j<round; j++)
 	{
+		scanf(" %s", order);
 		for(i=0; i<strlen(order); i++)
 		{
 			if(order[i] == 'A')
@@ -22,6 +22,7 @@ int main ()
 					case '3': ball[j] = 2; break;
 					default: ball[j] = ball[j]; break;
 				}
+				printf("Ball's current position is %d\n", ball[j]);
 			}
 			if(order[i] == 'B')
 			{
@@ -31,6 +32,7 @@ int main ()
 					case '4': ball[j] = 1; break;
 					default: ball[j] = ball[j]; break;
 				}
+				printf("Ball's current position is %d\n", ball[j]);
 			}
 			if(order[i] == 'C')
 			{
@@ -42,6 +44,7 @@ int main ()
 					case '4': ball[j] = 2; break;
 					default: ball[j] = ball[j]; break;
 				}
+				printf("Ball's current position is %d\n", ball[j]);
 			}
 			if(order[i] == 'D')
 			{
@@ -53,6 +56,7 @@ int main ()
 					case '4': ball[j] = 3; break;
 					default: ball[j] = ball[j]; break;
 				}
+				printf("Ball's current position is %d\n", ball[j]);
 			}
 			if(order[i] == 'E')
 			{
@@ -64,6 +68,7 @@ int main ()
 					case '4': ball[j] = 1; break;
 					default: ball[j] = ball[j]; break;
 				}
+				printf("Ball's current position is %d\n", ball[j]);
 			}
 		}
 	}
