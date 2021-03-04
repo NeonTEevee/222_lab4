@@ -6,7 +6,9 @@ int main ()
 	char sentence[200], acronym[200];
 	scanf("%[^\n]", sentence);
 	
-	acronym[0] = sentence[0] - 32;
+	acronym[0] = sentence[0];
+	if(acronym[0] > 90)
+		acronym[0]-=32;
 	for(i=1; i<strlen(sentence); i++)
 	{
 		if(sentence[i] == ' ')
@@ -43,7 +45,9 @@ int main ()
 				i++;
 			}  else {
 				i++;
-				acronym[j] = sentence[i] - 32;
+				acronym[j] = sentence[i];
+				if(acronym[j] > 90)
+					acronym[j]-=32;
 				j++;
 			}
 		}
